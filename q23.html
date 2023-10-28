@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Color Toggle</title>
+    <style>
+        body {
+            transition: background-color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Background Color Toggle</h1>
+
+    <button onclick="toggleBackgroundColor()">Toggle Background Color</button>
+
+    <script>
+        let isBackgroundColorChanged = false;
+
+        function toggleBackgroundColor() {
+            const body = document.body;
+            isBackgroundColorChanged = !isBackgroundColorChanged;
+
+            if (isBackgroundColorChanged) {
+                body.style.backgroundColor = "lightblue";
+            } else {
+                body.style.backgroundColor = "white";
+            }
+        }
+    </script>
+</body>
+</html>
